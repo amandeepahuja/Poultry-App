@@ -5,15 +5,17 @@ contract PoultryTraceability {
     struct PoultryBatch {
         string entity;
         string details;
-        uint batch;
-        uint timestamp;
+        string lat;
+        string long;
+        uint256 batch;
+        uint256 timestamp;
         address from;
     }
     
     PoultryBatch [] public poultrybatch;
 
-    function store(string memory _entity, string memory _details, uint _batch) public {
-        poultrybatch.push(PoultryBatch(_entity, _details,_batch,block.timestamp,msg.sender));
+    function store(string memory _entity, string memory _details, string memory _lat,string memory _long,uint _batch) public {
+        poultrybatch.push(PoultryBatch(_entity, _details, _lat, _long,_batch, block.timestamp ,msg.sender));
     }
 
 
