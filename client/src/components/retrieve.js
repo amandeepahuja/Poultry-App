@@ -1,5 +1,6 @@
 import { useState,useEffect } from "react";
-
+import { saveAs } from 'file-saver';
+// let {PythonShell}=require('python-shell')
 const Retrieve=({state})=>{
     const [retrieve,setRetrieve]=useState([]);
     const {contract}=state;
@@ -7,12 +8,25 @@ const Retrieve=({state})=>{
     useEffect(()=>{
         const retrieveentry=async()=>{
             const retrieve=await contract.retrieve();
+            let entry_string="{"
+            for(let i=0;i<retrieve.length;i++){
+            
+            entry_string=entry_string+i+":["
+            entry_string=entry_string+retrieve[i].entity+","+retrieve[i].details+","+retrieve[i].lat+","+retrieve[i].long+","+retrieve[i].batch+","+retrieve[i].from+","+retrieve[i].timestamp;
+            if (i==retrieve.length-1) {entry_string=entry_string+"]\n"}
+            else {entry_string=entry_string+"],\n"}
+            
+        }
+        entry_string=entry_string+"}"
+            const file = new Blob([entry_string], { type: 'text/plain;charset=utf-8' });
+            saveAs(file,"./entries.txt");
+            
+            console.log(retrieve)
             setRetrieve(retrieve);
         };
         contract && retrieveentry();
+
     },[contract]);
-
-
 
 
 

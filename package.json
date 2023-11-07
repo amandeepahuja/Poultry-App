@@ -6,6 +6,10 @@
   },
   "dependencies": {
     "create-react-app": "^5.0.1",
-    "dotenv": "^16.3.1"
-  }
+    "dotenv": "^16.3.1",
+    "file-saver": "^2.0.5",
+    "python-shell": "^3.0.0",
+    "write-file-p": "^1.0.8"
+  },
+  "browser": { "fs": false, "child_process": false }
 }

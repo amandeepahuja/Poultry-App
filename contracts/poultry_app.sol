@@ -10,11 +10,12 @@ contract PoultryTraceability {
         uint256 batch;
         uint256 timestamp;
         address from;
+        
     }
     
     PoultryBatch [] public poultrybatch;
     PoultryBatch [] public temp;
-    
+    event searched(PoultryBatch [] temp);
 
     function store(string memory _entity, string memory _details, string memory _lat, string memory _long, uint _batch) public {
         poultrybatch.push(PoultryBatch(_entity, _details, _lat, _long, _batch, block.timestamp, msg.sender));
@@ -32,6 +33,7 @@ contract PoultryTraceability {
                 temp.push(poultrybatch[i]);
             }
         }
+        emit searched(temp);
         return temp;
     }
 

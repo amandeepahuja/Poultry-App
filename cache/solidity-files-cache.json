@@ -1,0 +1,40 @@
+{
+  "_format": "hh-sol-cache-2",
+  "files": {
+    "C:\\Users\\amans\\OneDrive\\Documents\\Poultry App\\Poultry_blockchain_POC\\contracts\\poultry_app.sol": {
+      "lastModificationDate": 1698727726334,
+      "contentHash": "5969bbe285eac02f8e9b57c4420b4747",
+      "sourceName": "contracts/poultry_app.sol",
+      "solcConfig": {
+        "version": "0.8.19",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.8.0 <0.9.0"
+      ],
+      "artifacts": [
+        "PoultryTraceability"
+      ]
+    }
+  }
+}

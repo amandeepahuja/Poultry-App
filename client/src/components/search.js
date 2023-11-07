@@ -1,17 +1,30 @@
 import { useState,useEffect } from "react";
+import {ethers} from "ethers";
+import raw from './entries.txt'; // The relative path to your File
+// console.log(text);
 const Search=({state})=>{
-    const [search,setSearch]=useState([]);
+    const [result,setSearch]=useState([]);
     const {contract}=state;
-    useEffect(()=>{
+    // useEffect(()=>{
         const searchentry=async(event)=>{
             event.preventDefault();
             const batchid=document.querySelector("#batchid").value;
+            let entries="";
+            fetch(raw)
+            .then(r => r.text())
+            .then(text => {
+                entries=text;
+                result=JSON.parse(text);
+                console.log(typeof(result))
+                console.log(text[2]);
+            });
+            
             //await batchid.wait();
-            const search= await contract.search(batchid)
-            console.log(typeof(search))
-            setSearch(search);
+            
+            // console.log({temp})
+            // setSearch(temp);
             }; 
-    },[contract]);
+    // },[contract]);
 
 
 
@@ -28,7 +41,7 @@ return (<>
             </form>
 </div>
 <p style={{ textAlign: "center", marginTop: "20px" }}>Searched Entries</p>
-{Object.keys(search).map((index)=>{return(
+{Object.keys(result).map((index)=>{return(
 <div className="container-fluid" style={{ width: "100%" }} key={Math.random()}>
     <table style={{marginBottom: "10px",}}>
         <tbody>
@@ -47,7 +60,7 @@ return (<>
                       borderCollapse: "collapse",
                       padding: "7px",
                       width: "100px",
-                    }}>{index}:{String(search[index])}</td>
+                    }}>{index}:{String(result[index])}</td>
                 <td style={{
                       backgroundColor: "#96D4D4",
                       border: "1px solid white",

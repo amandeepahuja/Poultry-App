@@ -16,7 +16,7 @@ function App() {
   const [account, setAccount] = useState("None");
   useEffect(()=>{
     const connectWallet=async()=>{
-      const contractAddress="0x73abe3b8D5BC8acd0e66Cf3Ea38e43c2D39606b0";
+      const contractAddress="0xcB8A5cC914b2e6d43Fe31f6965f69E6034FF67F8";
       const contractABI=abi.abi;
       try{
         const {ethereum}=window;
@@ -62,7 +62,6 @@ function App() {
     <Store state={state}></Store>
     <Search state={state}></Search>
     <Retrieve state={state}></Retrieve>
-
     </div>
   </div>);
 }
