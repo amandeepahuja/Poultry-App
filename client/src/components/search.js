@@ -1,6 +1,6 @@
 import { useState,useEffect } from "react";
 import {ethers} from "ethers";
-import raw from './entries.txt'; // The relative path to your File
+// import raw from './entries.txt'; // The relative path to your File
 // console.log(text);
 const Search=({state})=>{
     const [result,setSearch]=useState([]);
@@ -8,23 +8,20 @@ const Search=({state})=>{
     // useEffect(()=>{
         const searchentry=async(event)=>{
             event.preventDefault();
+            let result;
             const batchid=document.querySelector("#batchid").value;
-            let entries="";
-            fetch(raw)
-            .then(r => r.text())
-            .then(text => {
-                entries=text;
-                result=JSON.parse(text);
-                console.log(typeof(result))
-                console.log(text[2]);
-            });
-            
-            //await batchid.wait();
+
+            fetch('http://localhost:5000/search',{
+                "method": "POST",
+                "headers": {"Content-Type": "application/json"},
+                "body": batchid,
+            }).then((result)=>console.log(result.json()))
+
             
             // console.log({temp})
-            // setSearch(temp);
+            // setSearch(result);
             }; 
-    // },[contract]);
+        // },[contract]);
 
 
 
