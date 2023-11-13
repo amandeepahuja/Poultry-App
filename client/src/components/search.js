@@ -1,5 +1,6 @@
 import { useState,useEffect } from "react";
 import {ethers} from "ethers";
+import MyImage from './myqr_new.jpg'
 // import raw from './entries.txt'; // The relative path to your File
 // console.log(text);
 const Search=({state})=>{
@@ -34,76 +35,13 @@ return (<>
                 <input type="number" id="batchid" placeholder="Enter Batch ID"></input>
             </div>
             <button type="submit" className="btn btn-primary"
-                    disabled={!state.contract}>Search</button>
+                    disabled={!state.contract}>Search</button> 
             </form>
 </div>
-<p style={{ textAlign: "center", marginTop: "20px" }}>Searched Entries</p>
-{Object.keys(result).map((index)=>{return(
-<div className="container-fluid" style={{ width: "100%" }} key={Math.random()}>
-    <table style={{marginBottom: "10px",}}>
-        <tbody>
-            <tr>
-                <th>Entity Name</th>
-                <th>Details</th>
-                <th>Batch ID</th>
-                <th>Latitude(*10^-4)</th>
-                <th>Longitude(*10^-4)</th>
-                <th>Timestamp</th>
-                <th>Address</th>
-            </tr>
-                <td style={{
-                      backgroundColor: "#96D4D4",
-                      border: "1px solid white",
-                      borderCollapse: "collapse",
-                      padding: "7px",
-                      width: "100px",
-                    }}>{index}:{String(result[index])}</td>
-                <td style={{
-                      backgroundColor: "#96D4D4",
-                      border: "1px solid white",
-                      borderCollapse: "collapse",
-                      padding: "7px",
-                      width: "100px",
-                    }}>{String(index.details)}</td>
-                <td style={{
-                      backgroundColor: "#96D4D4",
-                      border: "1px solid white",
-                      borderCollapse: "collapse",
-                      padding: "7px",
-                      width: "100px",
-                    }}>{String(index.lat)}</td>
-                    <td style={{
-                      backgroundColor: "#96D4D4",
-                      border: "1px solid white",
-                      borderCollapse: "collapse",
-                      padding: "7px",
-                      width: "100px",
-                    }}>{String(index.long)}</td>
-                <td style={{
-                      backgroundColor: "#96D4D4",
-                      border: "1px solid white",
-                      borderCollapse: "collapse",
-                      padding: "7px",
-                      width: "100px",
-                    }}>{String(index.batch)}</td>
-                <td style={{
-                      backgroundColor: "#96D4D4",
-                      border: "1px solid white",
-                      borderCollapse: "collapse",
-                      padding: "7px",
-                      width: "100px",
-                    }}>{new Date(index.timestamp * 1000).toLocaleString()}</td>
-                <td style={{
-                      backgroundColor: "#96D4D4",
-                      border: "1px solid white",
-                      borderCollapse: "collapse",
-                      padding: "7px",
-                      width: "100px",
-                    }}>{String(index.from)}</td>
-            </tbody>
-            </table>
-    </div>
-)})}
+<div class="div-img">
+    <img src={MyImage} style={{marginRight: '4px'} } width="300" height="300"></img>
+</div>
+
 </>)
 };
 export default Search;
