@@ -37,9 +37,11 @@ const Store=({state})=>{
         //console.log(ethers.utils.parseUnits(userLocation.latitude.toPrecision(5).split('.')[0], userLocation.latitude.toPrecision(5).split('.')[1]));
         //console.log(BigNumber.from(userLocation.latitude.toPrecision(5).split('.')[0]).mul(BigNumber.from(10).pow(userLocation.latitude.toPrecision(5).split('.')[1])));
         try{
-            let lat=userLocation.latitude.toPrecision(7).split('.')[0]+userLocation.latitude.toPrecision(7).split('.')[1]
-            let long=userLocation.longitude.toPrecision(7).split('.')[0]+userLocation.longitude.toPrecision(7).split('.')[1]
-            const transaction= await contract.store(entity,details,batch,lat,long)
+            let lat=String(userLocation.latitude)
+            // .toPrecision(7).split('.')[0]+userLocation.latitude.toPrecision(7).split('.')[1]
+            let long=String(userLocation.longitude)
+            // .toPrecision(7).split('.')[0]+userLocation.longitude.toPrecision(7).split('.')[1]
+            const transaction= await contract.store(entity,details,lat,long,batch)
             await transaction.wait();
             console.log("Transaction is done")
         }

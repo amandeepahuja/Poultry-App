@@ -50,8 +50,8 @@ return(<>
                 <th>Entity Name</th>
                 <th>Details</th>
                 <th>Batch ID</th>
-                <th>Latitude(*10^-4)</th>
-                <th>Longitude(*10^-4)</th>
+                <th>Latitude</th>
+                <th>Longitude</th>
                 <th>Timestamp</th>
                 <th>Address</th>
             </tr>
@@ -76,21 +76,22 @@ return(<>
                       borderCollapse: "collapse",
                       padding: "7px",
                       width: "100px",
-                    }}>{String(entry.lat)}</td>
-                    <td style={{
-                      backgroundColor: "#96D4D4",
-                      border: "1px solid white",
-                      borderCollapse: "collapse",
-                      padding: "7px",
-                      width: "100px",
-                    }}>{String(entry.long)}</td>
+                    }}>{String(entry.batch)}</td>
                 <td style={{
                       backgroundColor: "#96D4D4",
                       border: "1px solid white",
                       borderCollapse: "collapse",
                       padding: "7px",
                       width: "100px",
-                    }}>{String(entry.batch)}</td>
+                    }}>{String(entry.lat)}</td>
+                <td style={{
+                      backgroundColor: "#96D4D4",
+                      border: "1px solid white",
+                      borderCollapse: "collapse",
+                      padding: "7px",
+                      width: "100px",
+                    }}>{String(entry.long)}</td>
+                
                 <td style={{
                       backgroundColor: "#96D4D4",
                       border: "1px solid white",
