@@ -54,7 +54,9 @@ const Store=({state})=>{
 
 
     return (<>
+
     <div className="container-md" style={{ width: "50%", marginTop: "25px" }}>
+      <h3 class="fw-bolder text-center my-3">Store</h3>
         <form onSubmit={storeentry}>
             <div className="mb-3">
                 <label className="form-label">Entity Name</label>

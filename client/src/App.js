@@ -5,6 +5,7 @@ import './App.css';
 import Store from './components/store';
 import Retrieve from './components/retrieve';
 import Search from './components/search';
+import logo from './PricewaterhouseCoopers_Logo.svg.png';
 
 
 function App() {
@@ -51,18 +52,23 @@ function App() {
   //console.log(state)
 
   return (<div className="App">
-    <div style={{ backgroundColor: "#EFEFEF", height: "100%" }}>
+    <div style={{ backgroundColor: "#FFFFFF", height: "100%" }}>
       <p
-        class="text-muted lead "
         style={{ marginTop: "10px", marginLeft: "5px" }}
       >
-        <small>Connected Account - {account}</small>
+        <img src={logo} align="left" style={{ width: 125,height:100,marginLeft: "15px"}}></img>
+        <large>Connected Account - {account}</large>
       </p>
       <div className="container"></div>
+      <div class="row justify-content-center">
+    <div class="col-sm-8 col-lg-6 col-xl-4 border border-5 rounded shadow mt -5 p-5" style={{ backgroundColor: "#DEDEDE", height: "100%" }}>
     <Store state={state}></Store>
     <Search state={state}></Search>
-    <Retrieve state={state}></Retrieve>
     </div>
+    <Retrieve state={state}></Retrieve>
+
+  </div>
+  </div>
   </div>);
 }
 

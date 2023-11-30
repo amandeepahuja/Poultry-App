@@ -28,11 +28,13 @@ const Search=({state})=>{
 
 
 return (<>
+
 <div className="container-md" style={{ width: "50%", marginTop: "25px" }}>
+<h3 class="fw-bolder text-center my-3">Search</h3>
         <form onSubmit={searchentry}>
             <div className="mb-3">
-                <label >Enter the Batch ID to be searched</label>
-                <input type="number" id="batchid" placeholder="Enter Batch ID"></input>
+                <label className="form-label">Enter the Batch ID to be searched</label>
+                <input type="number" id="batchid" placeholder="Enter Batch ID" className="form-control"></input>
             </div>
             <button type="submit" className="btn btn-primary"
                     disabled={!state.contract}>Search</button> 
@@ -41,7 +43,6 @@ return (<>
 <div class="div-img">
     <img src={MyImage} style={{marginRight: '4px'} } width="300" height="300"></img>
 </div>
-
 </>)
 };
 export default Search;

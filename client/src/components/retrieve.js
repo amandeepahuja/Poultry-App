@@ -41,10 +41,11 @@ const Retrieve=({state})=>{
 
 
 return(<>
-<p style={{ textAlign: "center", marginTop: "20px" }}>Entries</p>
+
+<h3 class="fw-bolder text-center my-3">Entries</h3>
 {retrieve.map((entry)=>{return(
 <div className="container-fluid" style={{ width: "100%" }} key={Math.random()}>
-    <table style={{marginBottom: "10px",}}>
+    <table class="centerTable" >
         <tbody>
             <tr>
                 <th>Entity Name</th>
@@ -57,35 +58,35 @@ return(<>
             </tr>
             <tr>
                 <td style={{
-                      backgroundColor: "#96D4D4",
+                      backgroundColor: "#EB8C00",
                       border: "1px solid white",
                       borderCollapse: "collapse",
                       padding: "7px",
                       width: "100px",
                     }}>{String(entry.entity)}</td>
                 <td style={{
-                      backgroundColor: "#96D4D4",
+                      backgroundColor: "#EB8C00",
                       border: "1px solid white",
                       borderCollapse: "collapse",
                       padding: "7px",
                       width: "100px",
                     }}>{String(entry.details)}</td>
                 <td style={{
-                      backgroundColor: "#96D4D4",
+                      backgroundColor: "#EB8C00",
                       border: "1px solid white",
                       borderCollapse: "collapse",
                       padding: "7px",
                       width: "100px",
                     }}>{String(entry.batch)}</td>
                 <td style={{
-                      backgroundColor: "#96D4D4",
+                      backgroundColor: "#EB8C00",
                       border: "1px solid white",
                       borderCollapse: "collapse",
                       padding: "7px",
                       width: "100px",
                     }}>{String(entry.lat)}</td>
                 <td style={{
-                      backgroundColor: "#96D4D4",
+                      backgroundColor: "#EB8C00",
                       border: "1px solid white",
                       borderCollapse: "collapse",
                       padding: "7px",
@@ -93,14 +94,14 @@ return(<>
                     }}>{String(entry.long)}</td>
                 
                 <td style={{
-                      backgroundColor: "#96D4D4",
+                      backgroundColor: "#EB8C00",
                       border: "1px solid white",
                       borderCollapse: "collapse",
                       padding: "7px",
                       width: "100px",
                     }}>{new Date(entry.timestamp * 1000).toLocaleString()}</td>
                 <td style={{
-                      backgroundColor: "#96D4D4",
+                      backgroundColor: "#EB8C00",
                       border: "1px solid white",
                       borderCollapse: "collapse",
                       padding: "7px",
@@ -110,7 +111,9 @@ return(<>
         </tbody>
     </table>
     </div>
+    
 )})}
+
 </>
 );
 };
