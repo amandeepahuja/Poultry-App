@@ -36,7 +36,7 @@ return (<>
                 <label className="form-label">Enter the Batch ID to be searched</label>
                 <input type="number" id="batchid" placeholder="Enter Batch ID" className="form-control"></input>
             </div>
-            <button type="submit" className="btn btn-primary"
+            <button class="button2" type="submit" className="btn btn-primary"
                     disabled={!state.contract}>Search</button> 
             </form>
 </div>

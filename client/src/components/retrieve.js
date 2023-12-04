@@ -43,10 +43,7 @@ const Retrieve=({state})=>{
 return(<>
 
 <h3 class="fw-bolder text-center my-3">Entries</h3>
-{retrieve.map((entry)=>{return(
-<div className="container-fluid" style={{ width: "100%" }} key={Math.random()}>
-    <table class="centerTable" >
-        <tbody>
+<table class="centerTable" >
             <tr>
                 <th>Entity Name</th>
                 <th>Details</th>
@@ -56,6 +53,7 @@ return(<>
                 <th>Timestamp</th>
                 <th>Address</th>
             </tr>
+{retrieve.map((entry)=>{return(
             <tr>
                 <td style={{
                       backgroundColor: "#EB8C00",
@@ -108,11 +106,10 @@ return(<>
                       width: "100px",
                     }}>{String(entry.from)}</td>
             </tr>
-        </tbody>
-    </table>
-    </div>
-    
 )})}
+    </table>
+    
+
 
 </>
 );

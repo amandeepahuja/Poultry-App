@@ -38,3 +38,29 @@
 }
 
 .centerTable { margin: 0px auto; }
+
+.topnav {
+  overflow: hidden;
+  background-color: #EB8C00;
+}
+
+.topnav a {
+  float: center;
+  color: #EB8C00;
+
+  margin-top: 30%;
+  text-align: center;
+  padding: 10px 10px;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+
+/* Create a right-aligned (split) link inside the navigation bar */
+.topnav a.split {
+  float: right;
+  background-color: #04AA6D;
+  color: white;
+}
+
+.button2 {background-color: #EB8C00; border-radius: 4px;}

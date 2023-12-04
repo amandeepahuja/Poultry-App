@@ -66,7 +66,7 @@ const Store=({state})=>{
                 <label className="form-label">Batch ID</label>
                 <input type="number" id="batch" placeholder="Enter batch ID" className="form-control"></input>
             </div>
-                <button type="submit" className="btn btn-primary"
+                <button class="button2" type="submit" className="btn btn-primary"
                     disabled={!state.contract}>Store</button>
         </form>
     </div>

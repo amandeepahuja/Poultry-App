@@ -5,7 +5,7 @@ import './App.css';
 import Store from './components/store';
 import Retrieve from './components/retrieve';
 import Search from './components/search';
-import logo from './PricewaterhouseCoopers_Logo.svg.png';
+import logo from './pwclogo_new.png';
 
 
 function App() {
@@ -53,15 +53,20 @@ function App() {
 
   return (<div className="App">
     <div style={{ backgroundColor: "#FFFFFF", height: "100%" }}>
-      <p
-        style={{ marginTop: "10px", marginLeft: "5px" }}
-      >
-        <img src={logo} align="left" style={{ width: 125,height:100,marginLeft: "15px"}}></img>
-        <large>Connected Account - {account}</large>
+      <p style={{ marginTop: "10px", marginLeft: "5px" }}>
+      <div class="topnav">
+        <img src={logo} align="left" style={{ width: 175,height:140, marginLeft: "15px"}}></img>
+        <br></br>
+        <br></br>
+        <h2 class="fw-bolder text-center my-3">Supply Chain Transparency using Blockchain</h2>
+      </div>
+        
       </p>
-      <div className="container"></div>
+
       <div class="row justify-content-center">
     <div class="col-sm-8 col-lg-6 col-xl-4 border border-5 rounded shadow mt -5 p-5" style={{ backgroundColor: "#DEDEDE", height: "100%" }}>
+    <h3 class="fw-bolder text-center my-3">Connected Account<br></br></h3>
+        <h4>{account}</h4>
     <Store state={state}></Store>
     <Search state={state}></Search>
     </div>
