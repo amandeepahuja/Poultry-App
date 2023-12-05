@@ -55,15 +55,15 @@ function App() {
     <div style={{ backgroundColor: "#FFFFFF", height: "100%" }}>
       <p style={{ marginTop: "10px", marginLeft: "5px" }}>
       <div class="topnav">
-        <img src={logo} align="left" style={{ width: 175,height:140, marginLeft: "15px"}}></img>
+        <img src={logo} align="left" style={{ width: 180,height:140, marginLeft: "15px"}}></img>
         <br></br>
         <br></br>
-        <h2 class="fw-bolder text-center my-3">Supply Chain Transparency using Blockchain</h2>
+        <h2 class="fw-bolder my-3">Supply Chain Transparency using Blockchain</h2>
       </div>
         
       </p>
 
-      <div class="row justify-content-center">
+    <div class="row justify-content-center">
     <div class="col-sm-8 col-lg-6 col-xl-4 border border-5 rounded shadow mt -5 p-5" style={{ backgroundColor: "#DEDEDE", height: "100%" }}>
     <h3 class="fw-bolder text-center my-3">Connected Account<br></br></h3>
         <h4>{account}</h4>

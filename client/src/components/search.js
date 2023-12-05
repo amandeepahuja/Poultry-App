@@ -1,6 +1,8 @@
 import { useState,useEffect } from "react";
 import {ethers} from "ethers";
 import MyImage from './myqr_new.jpg'
+
+
 // import raw from './entries.txt'; // The relative path to your File
 // console.log(text);
 const Search=({state})=>{
@@ -29,7 +31,7 @@ const Search=({state})=>{
 
 return (<>
 
-<div className="container-md" style={{ width: "50%", marginTop: "25px" }}>
+<div className="container-md" style={{ width: "30%", marginTop: "25px" }}>
 <h3 class="fw-bolder text-center my-3">Search</h3>
         <form onSubmit={searchentry}>
             <div className="mb-3">
@@ -41,7 +43,7 @@ return (<>
             </form>
 </div>
 <div class="div-img">
-    <img src={MyImage} style={{marginRight: '4px'} } width="300" height="300"></img>
+    <img src={MyImage} style={{marginRight: '4px'} } width="300" height="300" alt="Search for a batch ID to generate the QR"></img>
 </div>
 </>)
 };
