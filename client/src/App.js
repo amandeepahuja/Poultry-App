@@ -5,7 +5,7 @@ import './App.css';
 import Store from './components/store';
 import Retrieve from './components/retrieve';
 import Search from './components/search';
-import logo from './pwclogo_new.png';
+
 
 
 function App() {
