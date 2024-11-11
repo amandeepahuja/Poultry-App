@@ -55,7 +55,6 @@ function App() {
     <div style={{ backgroundColor: "#FFFFFF", height: "100%" }}>
       <p style={{ marginTop: "10px", marginLeft: "5px" }}>
       <div class="topnav">
-        <img src={logo} align="left" style={{ width: 180,height:140, marginLeft: "15px"}}></img>
         <br></br>
         <br></br>
         <h2 class="fw-bolder my-3">Supply Chain Transparency using Blockchain</h2>
